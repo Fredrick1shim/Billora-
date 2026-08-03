@@ -1,7 +1,5 @@
-========================================================
-                 BILL MANAGEMENT APP
-          Flask + SQLite | Windows EXE Version
-========================================================
+#                 BILL MANAGEMENT APP
+#          Flask + SQLite | Windows EXE Version
 
 DESCRIPTION:
 -------------

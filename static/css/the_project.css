@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f4f4f4;
+  display:flexbox ;
+}
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form input, form textarea {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+button {
+  padding: 8px 12px;
+  margin-top: 10px;
+}
+
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #222;
+  color: white;
+  padding-top: 20px;
+}
+
+#sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#sidebar ul li {
+  margin: 15px 0;
+}
+
+#sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  transition: background 0.3s;
+}
+
+#sidebar ul li a:hover {
+  background-color: #444;
+}
+
+.youtube-button {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+#toggleSidebar {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.nav {
+  background-color: black;
+}

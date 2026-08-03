@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Billora | Dashboard</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mainpage.css') }}">
+<script src="{{ url_for('static', filename='js/chart.min.js') }}"></script>
+</head>
+<body>
+  <nav class="bg-gray-100 p-6 flex gap-4 justify-center">
+    <a href="/about_us" class="px-6 py-3 bg-white rounded-lg shadow text-indigo-700 font-bold text-xl hover:bg-indigo-50 transition">About Us</a>
+    <a href="/explore" class="px-6 py-3 bg-white rounded-lg shadow text-indigo-700 font-bold text-xl hover:bg-indigo-50 transition">Explore</a>
+    <a href="/the_project" class="px-6 py-3 bg-white rounded-lg shadow text-indigo-700 font-bold text-xl hover:bg-indigo-50 transition">The Project</a>
+    <a href="/pra" class="px-6 py-3 bg-white rounded-lg shadow text-indigo-700 font-bold text-xl hover:bg-indigo-50 transition">Reports</a>
+  </nav>
+
+<div class="container">
+
+    <header class="header">
+        <h1>Billora</h1>
+        <button id="addBillBtn" class="btn-add">+ Add Bill</button>
+    </header>
+
+    <section class="dashboard-grid">
+        <div class="dashboard-card">
+            <p>Total Bills</p>
+            <h3 id="totalBills">0</h3>
+        </div>
+        <div class="dashboard-card">
+            <p>Unpaid</p>
+            <h3 id="unpaidBills">0</h3>
+        </div>
+        <div class="dashboard-card">
+            <p>Overdue</p>
+            <h3 id="overdueBills">0</h3>
+        </div>
+        <div class="dashboard-card">
+            <p>Total Amount</p>
+            <h3 id="totalAmount">$0.00</h3>
+        </div>
+    </section>
+
+    <section class="bill-section">
+        <div class="bill-section-header">
+            <h2>Your Bills</h2>
+            <div>
+                <label>Filter: 
+                    <select id="filterStatus">
+                        <option value="all">All</option>
+                        <option value="paid">Paid</option>
+                        <option value="unpaid">Unpaid</option>
+                        <option value="overdue">Overdue</option>
+                    </select>
+                </label>
+                <label>Sort: 
+                    <select id="sortBills">
+                        <option value="dueDateAsc">Due Date (Asc)</option>
+                        <option value="dueDateDesc">Due Date (Desc)</option>
+                        <option value="amountAsc">Amount (Low-High)</option>
+                        <option value="amountDesc">Amount (High-Low)</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+        <div id="billsList">
+            <div class="empty-message">No bills yet. Click "+ Add Bill" to start.</div>
+        </div>
+    </section>
+
+    <section class="chart-section">
+        <h2>Spending by Category</h2>
+        <div class="chart-container">
+            <canvas id="categoryChart"></canvas>
+        </div>
+    </section>
+
+    <button id="printBtn" class="btn-print">Print as PDF</button>
+</div>
+
+<script src="{{ url_for('static', filename='js/mainpage.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bill Manager</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/the_project.css') }}">
+</head>
+<body>
+  <nav class="bg-gray-100 p-4 flex gap-4">
+    <a href="/about_us" class="text-indigo-600">About Us</a>
+    <a href="/explore" class="text-indigo-600">Explore</a>
+    <a href="/mainpage" class="text-indigo-600 font-bold">Dashboard</a>
+    <a href="/pra" class="text-indigo-600">Reports</a>
+  </nav>
+
+  <div class="board">
+    <header>
+      <h1>📋 Bill Manager</h1>
+    </header>
+
+    <section id="bill-form">
+      <h2>Add a New Bill</h2>
+      <form id="addBillForm">
+        <input type="text" id="payer" placeholder="Payer Name" required />
+        <input type="number" id="amount" placeholder="Amount" required />
+        <input type="date" id="dueDate" required />
+        <textarea id="description" placeholder="Payment Reference"></textarea>
+
+        <!-- Category dropdown -->
+        <select id="category" required>
+          <option value="">Select Category</option>
+          <option value="Food">Food</option>
+          <option value="Transport">Transport</option>
+          <option value="Utilities">Utilities</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <button type="submit">Add Bill</button>
+        <button type="button" id="printBtn">Print as PDF</button>
+      </form>
+    </section>
+
+    <section id="bill-list">
+      <h2>All Bills</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Payer</th>
+            <th>Amount</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Category</th> <!-- added -->
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="billsTableBody"></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/the_project.js') }}"></script>
+</body>
+</html>

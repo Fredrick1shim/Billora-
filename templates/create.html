@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Your Account</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/create.css') }}">
+</head>
+<body>
+  <div class="signup-container">
+    <h1 class="title">Billora</h1>
+    <h2>Create Your Account</h2>
+
+    <form class="signup-form" id="signup-form">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <label for="password">Password:</label>
+      <div class="password-field">
+        <input type="password" id="password" name="password" placeholder="••••••••" required />
+        <button type="button" class="toggle-visibility">&#x1F441;</button>
+      </div>
+
+      <button type="submit" class="signup-btn">Create your account</button>
+
+      <p class="login-prompt">
+        Already have a Billora account? <a href="{{ url_for('login_page') }}">Log In</a>
+      </p>
+
+      <p id="form-message"></p>
+    </form>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/create.js') }}"></script>
+</body>
+</html>

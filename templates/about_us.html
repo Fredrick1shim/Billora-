@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Billora Promo</title>
+
+  <!-- Shared Nav Styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+  <!-- Page Specific Styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/About_us.css') }}">
+</head>
+<body>
+  <nav class="bg-gray-100 p-6 flex gap-4 justify-center">
+    <a href="/explore" class="px-6 py-3 bg-white rounded-lg shadow text-indigo-700 font-bold text-xl hover:bg-indigo-50 transition">Explore</a>
+    <a href="/mainpage" class="px-6 py-3 bg-white rounded-lg shadow text-indigo-700 font-bold text-xl hover:bg-indigo-50 transition">Dashboard</a>
+    <a href="/the_project" class="px-6 py-3 bg-white rounded-lg shadow text-indigo-700 font-bold text-xl hover:bg-indigo-50 transition">The Project</a>
+    <a href="/pra" class="px-6 py-3 bg-white rounded-lg shadow text-indigo-700 font-bold text-xl hover:bg-indigo-50 transition">Reports</a>
+  </nav>
+
+  <div class="container">
+    <h1>Billora</h1>
+    <p class="tagline">We track bills, tame chaos, and empower smarter spending.</p>
+
+    <section>
+      <h2>What is Billora?</h2>
+      <p>
+        Billora is a subscription manager and bill tracker that helps users monitor recurring expenses, subscriptions, and payments—all in one place. It's especially popular among freelancers and small business owners.
+      </p>
+    </section>
+
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li>Track Over 200 Subscriptions</li>
+        <li>Currency Conversion</li>
+        <li>Automated Invoicing</li>
+        <li>Expense Management</li>
+        <li>Simple Interface</li>
+        <li>Multi-Platform Support</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Pricing</h2>
+      <ul>
+        <li><strong>Free Version:</strong> Includes basic tracking features.</li>
+        <li><strong>Billora Pro:</strong> Offers invoicing, inventory, and advanced tools for 45 days free, then requires a subscription.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Use Cases</h2>
+      <ul>
+        <li>Personal Finance: Stay on top of Netflix, Spotify, and other recurring charges.</li>
+        <li>Freelancers: Track client invoices, job time, and parts used.</li>
+        <li>Small Businesses: Manage subscriptions, billing cycles, and payment history.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

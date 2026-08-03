@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore - Billora</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/Explore.css') }}">
+</head>
+<body>
+
+  <nav class="bg-gray-100 p-6 flex gap-4 justify-center">
+    <a href="/about_us" class="px-6 py-3 bg-white rounded-lg shadow text-indigo-700 font-bold text-xl hover:bg-indigo-50 transition">About Us</a>
+    <a href="/mainpage" class="px-6 py-3 bg-white rounded-lg shadow text-indigo-700 font-bold text-xl hover:bg-indigo-50 transition">Dashboard</a>
+    <a href="/the_project" class="px-6 py-3 bg-white rounded-lg shadow text-indigo-700 font-bold text-xl hover:bg-indigo-50 transition">The Project</a>
+    <a href="/pra" class="px-6 py-3 bg-white rounded-lg shadow text-indigo-700 font-bold text-xl hover:bg-indigo-50 transition">Reports</a>
+  </nav>
+
+  <main class="container">
+    <div class="content">
+      <p class="billbot-small">Billora</p>
+      <h1 class="billbot-large">Explore</h1>
+      <hr />
+    </div>
+
+    <section class="explore-grid">
+      <div class="card" style="background-color: aqua;">Box 1</div>
+      <div class="card" style="background-color: pink;">Box 2</div>
+      <div class="card" style="background-color: aqua;">Box 3</div>
+      
+      <div class="card" style="background-color: aqua;">Box 4</div>
+      <div class="card" style="background-color: pink;">Box 5</div>
+      <div class="card" style="background-color: aqua;">Box 6</div>
+
+      <div class="card" style="background-color: aqua;">Box 7</div>
+      <div class="card" style="background-color: pink;">Box 8</div>
+      <div class="card" style="background-color: aqua;">Box 9</div>
+    </section>
+  </main>
+
+</body>
+</html>
